@@ -21,6 +21,7 @@ class LibraryController extends AbstractController
         $title = "Список книг";
         $repository = $this->getDoctrine()->getRepository(Book::class);
         $books = $repository->findAll();
+        
         // $books = [
         //     [
         //         "name" => "Гари Поттер и Узник Азкабана",
@@ -28,7 +29,7 @@ class LibraryController extends AbstractController
         //         "author" => "Джоан Роулинг"
         //     ],
         //     [
-        //         "name" => "Маленький принцы",
+        //         "name" => "Маленький принц",
         //         "year" => 1943,
         //         "author" => "Антуан де Сент-Экзюпери"
         //     ],
