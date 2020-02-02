@@ -1,0 +1,8 @@
+App\Entity\Book:
+  properties:
+    name:
+      - NotBlank: ~
+    year:
+      - NotBlank: ~
+    author:
+      - NotBlank: ~

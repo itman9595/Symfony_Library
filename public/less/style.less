@@ -1,0 +1,33 @@
+.content {
+    top: 20px;
+    left: 60px;
+    position: relative;
+    .book {
+        @width: 20%;
+        .book-item {
+            float: left;
+            border: 1px black solid;
+            width: @width;
+            height: 160px;
+            padding: 15px;
+            text-align: left;
+            margin: 0px 20px 20px 0px;
+            .book-title {
+            }
+            .book-year {
+            }
+            .book-author {
+            }
+        }
+        .edit {
+            height: 200px;
+            .book-submit {
+                margin-left: @width/2;
+            }
+        }
+    }
+    .book:after {
+        content: "";
+        display: table;
+    }
+}

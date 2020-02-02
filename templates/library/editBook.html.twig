@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="content">
+        <a href="{{ path('edit') }}"><button type="button" class="btn btn-primary btn-lg">Назад</button></a>
+        <h1>{{ title }}</h1>
+        <br>
+        {{ form(form) }}
+    </div>
+{% endblock %}

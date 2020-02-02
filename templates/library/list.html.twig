@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <ul class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('list') }}">Список книг</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('add') }}">Добавить книгу</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('edit') }}">Редактировать книгу</a>
+        </li>
+    </ul>
+    <div class="content">
+        <h1>{{ title }}</h1>
+        <br>
+        {% if books is empty %}
+            <h1>Список книг пуст. Пожалуйста, добавьте новую книгу перейдя по ссылке<a href="{{ path('add') }}"></a>.</h1>
+        {% else %}
+            {% for book in books %}
+                <div class="book">
+                    <div class="book-item">
+                        <h5 class="book-title">Название: {{ book.name }}</h5>
+                        <p class="book-year">Год: {{ book.year }}</p>
+                        <p class="book-author">Автор: {{ book.author }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
